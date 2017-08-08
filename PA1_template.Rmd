@@ -17,7 +17,8 @@ options(scipen=999)
 ## Loading and preprocessing the data
 
 ```{r preprocess}
-activity <- read.csv("activity.csv")
+con <- unz("activity.zip", "activity.csv")
+activity <- read.csv(con)
 head(activity)
 summary(activity$steps)
 colSums(is.na(activity))

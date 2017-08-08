@@ -14,7 +14,8 @@ options(scipen=999)
 
 
 ```r
-activity <- read.csv("activity.csv")
+con <- unz("activity.zip", "activity.csv")
+activity <- read.csv(con)
 head(activity)
 ```
 

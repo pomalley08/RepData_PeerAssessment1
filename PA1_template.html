@@ -126,7 +126,8 @@ opts_chunk$set(echo = TRUE)
 options(scipen=999)</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<pre class="r"><code>activity &lt;- read.csv(&quot;activity.csv&quot;)
+<pre class="r"><code>con &lt;- unz(&quot;activity.zip&quot;, &quot;activity.csv&quot;)
+activity &lt;- read.csv(con)
 head(activity)</code></pre>
 <pre><code>##   steps       date interval
 ## 1    NA 2012-10-01        0
